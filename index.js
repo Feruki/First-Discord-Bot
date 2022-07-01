@@ -85,8 +85,6 @@ client.on('messageCreate', async message => {
                     let timeoutU = message.guild.members.cache.get(msg[1].slice(2, msg[1].length-1));
                     let reason = msg.slice(3, msg.length).join(' ');
 
-                    console.log(reason);
-
                     if(timeoutU != undefined && timeoutU.moderatable) {
                         timeoutU.timeout(msg[2] * 60000, reason);
                         if(msg[2] > 0) {
