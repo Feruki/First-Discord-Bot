@@ -1,6 +1,5 @@
 const { client, prefix } = require('./config');
 const { number } = require('@hikyu/random');
-var tokenReal;
 
 
 client.on('ready', () => {
@@ -12,7 +11,7 @@ client.on('messageCreate', async message => {
     if(message.author.bot) return;
 
     //? Has a 1% chance on every message to reply with an insult, 57 is just a random number pick your favourite
-    switch(number(1, 60)) {
+    switch(number(1, 50)) {
         case 37:
             require('./Events/insult')(message);
             break;
