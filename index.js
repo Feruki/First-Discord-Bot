@@ -137,5 +137,4 @@ client.on('interactionCreate', async interaction => {
         require('./Events/interactionRoles')(interaction, interaction.member);  
 });
 
-client.login("OTM1ODExNDQzMDU4Njg4MDEw.GCS8oC.lX_pYBj_WM-Qvzg3OHUZcExv2laiXCjvKKkgVc");
-// client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN);
