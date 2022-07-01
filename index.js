@@ -1,5 +1,6 @@
 const { client, prefix } = require('./config');
 const { number } = require('@hikyu/random');
+var tokenReal;
 
 
 client.on('ready', () => {
