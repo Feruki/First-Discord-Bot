@@ -1,5 +1,4 @@
 const { client, prefix } = require('./config');
-const { tokenTest, tokenReal } = require('./token.json');
 const { number } = require('@hikyu/random');
 
 
