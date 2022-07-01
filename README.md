@@ -8,4 +8,4 @@ It has a added "fun" thing which randomly insults people pulling from two differ
 
 
 Might work on it further, I'm not sure, it was just my first try after learning JS in my 3rd semester of uni for a bit, it did its job and that's what I'm fine with for now.
-Obviously many things can be bettered, but as I said for a small scale server like I am using it right now it works fine as is.
+Obviously many things can be improved, but as I said for a small scale server like I am using it right now it works fine as is.
