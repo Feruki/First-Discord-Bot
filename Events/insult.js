@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 const { number } = require('@hikyu/random');
 const { translate } = require('bing-translate-api');
-const { polak } = requiire('./config');
+const { polak } = require('./config');
 
 module.exports = async message => {
     //? Get insults via axios (Multiple APIs trying to avoid duplicates)
