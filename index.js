@@ -135,4 +135,4 @@ client.on('interactionCreate', async interaction => {
         require('./Events/interactionRoles')(interaction, interaction.member);  
 });
 
-client.login(tokenReal);
+client.login(process.env.DISCORD_TOKEN);
