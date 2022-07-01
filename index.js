@@ -36,7 +36,7 @@ client.on('messageCreate', async message => {
                 //? Only if you have the permissions to ban
                 if(message.member.permissions.has('BAN_MEMBERS')) {
                     //! To ban someone you have to mention them reading that gives <!@USERID>, slicing so you are left with only the ID
-                    let banU = message.guild.members.cache.get(msg[1].slice(3, msg[1].length-1));
+                    let banU = message.guild.members.cache.get(msg[1].slice(2, msg[1].length-1));
                     //? Supplying days is optional, hence the 2 different start points
                     let reason = isNaN(msg[2]) ? msg.slice(2, msg.length).join(' ') : msg.slice(3, msg.length).join(' ');
                     // If the 3rd position in msg is a number it's "days", if not then it's just defaulted to 0
@@ -61,7 +61,7 @@ client.on('messageCreate', async message => {
                 break;
             case 'kick':
                 if(message.member.permissions.has('KICK_MEMBERS')) {
-                    let kickU = message.guild.members.cache.get(msg[1].slice(3, msg[1].length-1)); 
+                    let kickU = message.guild.members.cache.get(msg[1].slice(2, msg[1].length-1)); 
                     let reason = msg.slice(2, msg.length).join(' ');
 
                     if(kickU != undefined && kickU.moderatable) {
@@ -82,8 +82,10 @@ client.on('messageCreate', async message => {
                 break;
             case 'to':
                 if(message.member.permissions.has('MODERATE_MEMBERS')) {
-                    let timeoutU = message.guild.members.cache.get(msg[1].slice(3, msg[1].length-1));
+                    let timeoutU = message.guild.members.cache.get(msg[1].slice(2, msg[1].length-1));
                     let reason = msg.slice(3, msg.length).join(' ');
+
+                    console.log(reason);
 
                     if(timeoutU != undefined && timeoutU.moderatable) {
                         timeoutU.timeout(msg[2] * 60000, reason);
@@ -135,4 +137,5 @@ client.on('interactionCreate', async interaction => {
         require('./Events/interactionRoles')(interaction, interaction.member);  
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login("OTM1ODExNDQzMDU4Njg4MDEw.GCS8oC.lX_pYBj_WM-Qvzg3OHUZcExv2laiXCjvKKkgVc");
+// client.login(process.env.DISCORD_TOKEN);
